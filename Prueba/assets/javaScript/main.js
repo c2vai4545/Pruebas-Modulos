@@ -21,6 +21,16 @@ class Carrito {
         this.productos = [];
     }
 
+    limpiarCarrito() {
+        console.log("Limpianado carrito...");
+        console.log("Productos antes de limpiar:", this.productos);
+        this.productos = [];
+        document.getElementById("carrito-productos").innerHTML = "";
+        document.getElementById("total").innerHTML = "Total: $0.00";
+        this.mostrarDetalles();
+        console.log("Productos después de limpiar:", this.productos);
+    }
+
     agregarProducto(producto) {
         this.productos.push(producto);
         this.actualizarTotal();
@@ -79,5 +89,11 @@ document.getElementById("finalizar-compra").addEventListener("click", () => {
 // Agregar evento de click al botón "Confirmar compra"
 document.getElementById("confirmar-compra").addEventListener("click", () => {
     alert("Gracias por su compra!");
-    // Aquí puedes agregar la lógica para procesar la compra
+    setTimeout(() => {
+        // Limpiar el carrito
+        carrito.limpiarCarrito(); // Llama al método limpiarCarrito del objeto carrito
+        // Ocultar el botón "Confirmar compra" y mostrar el botón "Finalizar compra"
+        document.getElementById("finalizar-compra").style.display = "block";
+        document.getElementById("confirmar-compra").style.display = "none";
+    }, 100);
 });
