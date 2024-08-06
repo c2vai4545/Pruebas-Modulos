@@ -3,7 +3,8 @@ const productos = [
     { nombre: "Tomates", unidad: "1kg", valor: 2500 },
     { nombre: "Pan", unidad: "500gr", valor: 1000 },
     { nombre: "Papas", unidad: "1kg", valor: 1100 },
-    { nombre: "Leche", unidad: "1Lt", valor: 900 }
+    { nombre: "Leche", unidad: "1Lt", valor: 900 },
+    { nombre: "Queso", unidad: "100Gr", valor: 900 },
 ];
 
 // Clase Producto
