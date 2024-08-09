@@ -90,11 +90,10 @@ document.getElementById("finalizar-compra").addEventListener("click", () => {
 // Agregar evento de click al botón "Confirmar compra"
 document.getElementById("confirmar-compra").addEventListener("click", () => {
     alert("Gracias por su compra!");
-    setTimeout(() => {
-        // Limpiar el carrito
-        carrito.limpiarCarrito(); // Llama al método limpiarCarrito del objeto carrito
-        // Ocultar el botón "Confirmar compra" y mostrar el botón "Finalizar compra"
-        document.getElementById("finalizar-compra").style.display = "block";
-        document.getElementById("confirmar-compra").style.display = "none";
-    }, 100);
+    // Limpiar el carrito
+    carrito.limpiarCarrito(); // Llama al método limpiarCarrito del objeto carrito
+    // Ocultar el botón "Confirmar compra" y mostrar el botón "Finalizar compra"
+    document.getElementById("finalizar-compra").style.display = "block";
+    document.getElementById("confirmar-compra").style.display = "none";
+    
 });
